@@ -123,7 +123,41 @@
                     <view key="view" contentMode="scaleToFill" id="Btd-Qo-iIt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="cqZ-NY-K3s">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aJ2-kf-G8K"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of categories:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hov-b7-Dac">
+                                <rect key="frame" x="16" y="116" width="140" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="4Ei-ZZ-CWV"/>
+                                    <constraint firstAttribute="height" constant="22" id="yMY-4p-ecI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HR0-Wf-vmL">
+                                <rect key="frame" x="16" y="146" width="568" height="397"/>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hov-b7-Dac" firstAttribute="top" secondItem="cqZ-NY-K3s" secondAttribute="bottom" constant="8" id="D2a-MZ-C1b"/>
+                            <constraint firstAttribute="trailing" secondItem="cqZ-NY-K3s" secondAttribute="trailing" id="DSh-iU-PEg"/>
+                            <constraint firstItem="NzH-3F-84c" firstAttribute="top" secondItem="HR0-Wf-vmL" secondAttribute="bottom" constant="8" id="Fhk-AT-gtJ"/>
+                            <constraint firstItem="HR0-Wf-vmL" firstAttribute="trailing" secondItem="Btd-Qo-iIt" secondAttribute="trailingMargin" id="REw-PQ-7w6"/>
+                            <constraint firstItem="HR0-Wf-vmL" firstAttribute="top" secondItem="Hov-b7-Dac" secondAttribute="bottom" constant="8" id="Ypl-GI-dQF"/>
+                            <constraint firstItem="HR0-Wf-vmL" firstAttribute="leading" secondItem="Btd-Qo-iIt" secondAttribute="leadingMargin" id="f89-Qy-8Lc"/>
+                            <constraint firstItem="cqZ-NY-K3s" firstAttribute="leading" secondItem="Btd-Qo-iIt" secondAttribute="leading" id="jzV-Bh-lJo"/>
+                            <constraint firstItem="cqZ-NY-K3s" firstAttribute="top" secondItem="DFJ-2a-a1w" secondAttribute="bottom" id="nGl-LO-UvZ"/>
+                            <constraint firstItem="Hov-b7-Dac" firstAttribute="leading" secondItem="Btd-Qo-iIt" secondAttribute="leadingMargin" id="wtP-Tp-AF0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="Gxh-Sf-caU"/>
                 </viewController>
@@ -204,7 +238,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Instant Sale" id="rBO-nw-Pbs"/>
+                    <navigationItem key="navigationItem" title="Instant Sale" id="rBO-nw-Pbs">
+                        <barButtonItem key="rightBarButtonItem" image="info" id="Pv6-Hx-QKq"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgQ-EV-YaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -308,6 +344,7 @@
     </scenes>
     <resources>
         <image name="homeTab" width="30" height="30"/>
+        <image name="info" width="30" height="30"/>
         <image name="instantTab" width="40" height="40"/>
         <image name="messageTab" width="33" height="33"/>
         <image name="profileTab" width="35" height="35"/>
