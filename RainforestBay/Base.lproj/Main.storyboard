@@ -400,7 +400,53 @@
                     <view key="view" contentMode="scaleToFill" id="d2Y-zq-pm4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W82-Vi-B0X">
+                                <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JZt-BW-eUc">
+                                        <rect key="frame" x="200" y="10" width="200" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="HrP-ed-vhl"/>
+                                            <constraint firstAttribute="width" constant="200" id="I9z-bd-785"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Inbox"/>
+                                            <segment title="Sent"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="JZt-BW-eUc" secondAttribute="centerX" id="Zhu-lA-gv7"/>
+                                    <constraint firstAttribute="height" constant="50" id="eOs-m8-92y"/>
+                                    <constraint firstAttribute="centerY" secondItem="JZt-BW-eUc" secondAttribute="centerY" id="qgl-We-iA3"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-N2-pb3">
+                                <rect key="frame" x="0.0" y="114" width="600" height="437"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="plq-X2-VuW">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="plq-X2-VuW" id="gtm-aL-s5B">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yXR-N2-pb3" firstAttribute="top" secondItem="W82-Vi-B0X" secondAttribute="bottom" id="7WY-3K-Bfc"/>
+                            <constraint firstAttribute="trailing" secondItem="yXR-N2-pb3" secondAttribute="trailing" id="AX5-TQ-PBk"/>
+                            <constraint firstAttribute="trailing" secondItem="W82-Vi-B0X" secondAttribute="trailing" id="DPG-lW-IHb"/>
+                            <constraint firstItem="W82-Vi-B0X" firstAttribute="leading" secondItem="d2Y-zq-pm4" secondAttribute="leading" id="QOs-Mq-fmI"/>
+                            <constraint firstItem="W82-Vi-B0X" firstAttribute="top" secondItem="Hrx-mq-J80" secondAttribute="bottom" id="dTG-Q2-M2V"/>
+                            <constraint firstItem="yXR-N2-pb3" firstAttribute="leading" secondItem="d2Y-zq-pm4" secondAttribute="leading" id="tCd-Dl-3g3"/>
+                            <constraint firstItem="Zpc-w6-5UJ" firstAttribute="top" secondItem="yXR-N2-pb3" secondAttribute="bottom" id="trg-N5-50l"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Messages" id="rOT-Rr-3yH"/>
                 </viewController>
