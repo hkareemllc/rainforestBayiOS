@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property BOOL isSignUp;
+@property (weak, nonatomic) IBOutlet UIButton *goHomeButton;
+@property (weak, nonatomic) IBOutlet UIButton *switchButton;
 @end
 
 @implementation AuthViewController
@@ -26,6 +28,9 @@
     self.userFieldView.layer.cornerRadius = 5.0;
     self.authButton.layer.cornerRadius = 5.0;
     self.isSignUp = YES;
+    self.goHomeButton.layer.cornerRadius = 5.0;
+    self.switchButton.layer.cornerRadius = 5.0;
+    
     //textfield
     [self.usernameField setReturnKeyType:UIReturnKeyDone];
     [self.passwordField setReturnKeyType:UIReturnKeyDone];
