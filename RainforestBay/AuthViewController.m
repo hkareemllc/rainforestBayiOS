@@ -8,30 +8,42 @@
 
 #import "AuthViewController.h"
 
-@interface AuthViewController ()
-
+@interface AuthViewController () <UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UIView *userFieldView;
+@property (weak, nonatomic) IBOutlet UIButton *authButton;
+@property (weak, nonatomic) IBOutlet UITextField *usernameField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @end
 
 @implementation AuthViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    //view setup
+    self.userFieldView.layer.cornerRadius = 5.0;
+    self.authButton.layer.cornerRadius = 5.0;
+
+    //textfield
+    [self.usernameField setReturnKeyType:UIReturnKeyDone];
+    [self.passwordField setReturnKeyType:UIReturnKeyDone];
+    self.usernameField.delegate = self;
+    self.passwordField.delegate = self;
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Buttons
+
+- (IBAction)onSwitchButtonPressed:(id)sender {
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)onAuthButtonPressed:(UIButton *)sender {
 }
-*/
 
+#pragma mark - UITextField
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
 @end
