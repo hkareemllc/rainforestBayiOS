@@ -7,19 +7,28 @@
 //
 
 #import "ProfileViewController.h"
+#import <Parse/Parse.h>
 
 @interface ProfileViewController ()
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *barButton;
+@property (weak, nonatomic) IBOutlet UIButton *editProfileButton;
 @end
 
 @implementation ProfileViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        [self.barButton setTitle:@"Logout"];
+    } else {
+        [self.barButton setTitle:@"Sign Up"];
+        [self.editProfileButton setTitle:@"" forState:UIControlStateNormal];
+    }
 }
 
 - (IBAction)onLogoutButtonPressed:(id)sender {
+    [PFUser logOut];
     [self performSegueWithIdentifier:@"ProfileToAuth" sender:sender];
 }
 @end

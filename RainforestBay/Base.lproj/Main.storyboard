@@ -244,10 +244,26 @@
                                             <action selector="onSwitchButtonPressed:" destination="qqu-m6-Usz" eventType="touchUpInside" id="hii-jY-1pY"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSW-Ye-z7Z">
+                                        <rect key="frame" x="8" y="212" width="66" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="1w2-9g-bqG"/>
+                                            <constraint firstAttribute="height" constant="30" id="Xp6-Vs-qq5"/>
+                                        </constraints>
+                                        <state key="normal" title="Go Home">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onHomeButtonPressed:" destination="qqu-m6-Usz" eventType="touchUpInside" id="7Jl-TZ-mH9"/>
+                                            <action selector="onSwitchButtonPressed:" destination="qqu-m6-Usz" eventType="touchUpInside" id="zUd-pb-tM8"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="DEo-3s-TSm"/>
+                                    <constraint firstAttribute="bottom" secondItem="xSW-Ye-z7Z" secondAttribute="bottom" constant="8" id="EEL-pF-2AR"/>
+                                    <constraint firstItem="xSW-Ye-z7Z" firstAttribute="leading" secondItem="Chv-os-I2r" secondAttribute="leading" constant="8" id="Ilo-FU-9Lk"/>
                                     <constraint firstAttribute="trailing" secondItem="k8c-aJ-tjU" secondAttribute="trailing" constant="8" id="NQP-Fa-hPS"/>
                                     <constraint firstAttribute="bottom" secondItem="bXU-Hj-0oe" secondAttribute="bottom" constant="8" id="XHk-fw-vH0"/>
                                     <constraint firstAttribute="centerX" secondItem="QQ3-QM-qoA" secondAttribute="centerX" id="b3N-bV-Njm"/>
@@ -320,6 +336,7 @@
                         <outlet property="passwordField" destination="XXT-wy-wHY" id="Z8a-Aj-ck6"/>
                         <outlet property="userFieldView" destination="BAE-4f-btK" id="OGO-JL-u0X"/>
                         <outlet property="usernameField" destination="ET3-IJ-xs0" id="wbY-6v-Uuo"/>
+                        <segue destination="PwP-l8-uNx" kind="show" identifier="AuthToHome" id="2Kl-0j-GqD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atc-S0-G8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -833,6 +850,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="barButton" destination="QTY-3W-Smm" id="MLJ-IX-MJ4"/>
+                        <outlet property="editProfileButton" destination="RCi-77-oIi" id="93r-de-vKJ"/>
                         <segue destination="qqu-m6-Usz" kind="presentation" identifier="ProfileToAuth" id="bZO-XM-GtB"/>
                     </connections>
                 </viewController>
