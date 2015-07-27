@@ -18,6 +18,9 @@
 		85ADC4591B657993000D2C6A /* InstantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85ADC4581B657993000D2C6A /* InstantViewController.m */; };
 		85ADC45C1B65799B000D2C6A /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85ADC45B1B65799B000D2C6A /* MessageViewController.m */; };
 		85ADC45F1B6579A3000D2C6A /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85ADC45E1B6579A3000D2C6A /* ProfileViewController.m */; };
+		85ADC4681B659EBC000D2C6A /* HowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85ADC4671B659EBC000D2C6A /* HowViewController.m */; };
+		85ADC46B1B659EC3000D2C6A /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85ADC46A1B659EC3000D2C6A /* AuthViewController.m */; };
+		85ADC46F1B65BC17000D2C6A /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85ADC46E1B65BC17000D2C6A /* HomeCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,12 @@
 		85ADC45B1B65799B000D2C6A /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		85ADC45D1B6579A3000D2C6A /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		85ADC45E1B6579A3000D2C6A /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		85ADC4661B659EBC000D2C6A /* HowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowViewController.h; sourceTree = "<group>"; };
+		85ADC4671B659EBC000D2C6A /* HowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HowViewController.m; sourceTree = "<group>"; };
+		85ADC4691B659EC3000D2C6A /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
+		85ADC46A1B659EC3000D2C6A /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
+		85ADC46D1B65BC17000D2C6A /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
+		85ADC46E1B65BC17000D2C6A /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +105,9 @@
 				858A61931B656FEB00F84947 /* AppDelegate.h */,
 				858A61941B656FEB00F84947 /* AppDelegate.m */,
 				858A61991B656FEB00F84947 /* Main.storyboard */,
-				858A61B81B6572D200F84947 /* Controllers */,
+				85ADC46C1B659EF6000D2C6A /* Secondary Controllers */,
+				858A61B81B6572D200F84947 /* Primary Controllers */,
+				85ADC4701B65BC39000D2C6A /* Custom Classes */,
 				858A619C1B656FEB00F84947 /* Images.xcassets */,
 				858A619E1B656FEB00F84947 /* LaunchScreen.xib */,
 				858A618F1B656FEB00F84947 /* Supporting Files */,
@@ -130,7 +141,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		858A61B81B6572D200F84947 /* Controllers */ = {
+		858A61B81B6572D200F84947 /* Primary Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				858A61B51B6572CB00F84947 /* HomeViewController.h */,
@@ -144,7 +155,27 @@
 				85ADC45D1B6579A3000D2C6A /* ProfileViewController.h */,
 				85ADC45E1B6579A3000D2C6A /* ProfileViewController.m */,
 			);
-			name = Controllers;
+			name = "Primary Controllers";
+			sourceTree = "<group>";
+		};
+		85ADC46C1B659EF6000D2C6A /* Secondary Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				85ADC4661B659EBC000D2C6A /* HowViewController.h */,
+				85ADC4671B659EBC000D2C6A /* HowViewController.m */,
+				85ADC4691B659EC3000D2C6A /* AuthViewController.h */,
+				85ADC46A1B659EC3000D2C6A /* AuthViewController.m */,
+			);
+			name = "Secondary Controllers";
+			sourceTree = "<group>";
+		};
+		85ADC4701B65BC39000D2C6A /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				85ADC46D1B65BC17000D2C6A /* HomeCollectionViewCell.h */,
+				85ADC46E1B65BC17000D2C6A /* HomeCollectionViewCell.m */,
+			);
+			name = "Custom Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,10 +281,13 @@
 				85ADC45C1B65799B000D2C6A /* MessageViewController.m in Sources */,
 				858A61951B656FEB00F84947 /* AppDelegate.m in Sources */,
 				85ADC4591B657993000D2C6A /* InstantViewController.m in Sources */,
+				85ADC4681B659EBC000D2C6A /* HowViewController.m in Sources */,
+				85ADC46B1B659EC3000D2C6A /* AuthViewController.m in Sources */,
 				858A61921B656FEB00F84947 /* main.m in Sources */,
 				85ADC45F1B6579A3000D2C6A /* ProfileViewController.m in Sources */,
 				85ADC4561B65798B000D2C6A /* SearchViewController.m in Sources */,
 				858A61B71B6572CB00F84947 /* HomeViewController.m in Sources */,
+				85ADC46F1B65BC17000D2C6A /* HomeCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
