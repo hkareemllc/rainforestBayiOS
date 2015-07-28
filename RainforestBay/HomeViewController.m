@@ -45,6 +45,10 @@
     return 5;
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"HomeToListings" sender:self];
+}
+
 - (void)scrollSlowly {
     UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathWithIndex:self.currentIndex]];
     NSInteger x = cell.frame.origin.x;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		855020EE1B66A14700960A23 /* SellFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855020ED1B66A14700960A23 /* SellFormViewController.m */; };
 		858A61921B656FEB00F84947 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 858A61911B656FEB00F84947 /* main.m */; };
 		858A61951B656FEB00F84947 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 858A61941B656FEB00F84947 /* AppDelegate.m */; };
 		858A619B1B656FEB00F84947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858A61991B656FEB00F84947 /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 		85ADC4891B65C519000D2C6A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85ADC4881B65C519000D2C6A /* libsqlite3.dylib */; };
 		85ADC48B1B65C521000D2C6A /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85ADC48A1B65C521000D2C6A /* Accounts.framework */; };
 		85ADC48D1B65C525000D2C6A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85ADC48C1B65C525000D2C6A /* Social.framework */; };
+		85CC65461B67164600BB51F9 /* Listing.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CC65451B67164600BB51F9 /* Listing.m */; };
+		85CC654A1B67204A00BB51F9 /* ListingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CC65491B67204A00BB51F9 /* ListingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		855020EC1B66A14700960A23 /* SellFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellFormViewController.h; sourceTree = "<group>"; };
+		855020ED1B66A14700960A23 /* SellFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellFormViewController.m; sourceTree = "<group>"; };
 		858A618C1B656FEB00F84947 /* RainforestBay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainforestBay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		858A61901B656FEB00F84947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		858A61911B656FEB00F84947 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +94,10 @@
 		85ADC4881B65C519000D2C6A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		85ADC48A1B65C521000D2C6A /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		85ADC48C1B65C525000D2C6A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		85CC65441B67164600BB51F9 /* Listing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listing.h; sourceTree = "<group>"; };
+		85CC65451B67164600BB51F9 /* Listing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Listing.m; sourceTree = "<group>"; };
+		85CC65481B67204A00BB51F9 /* ListingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListingsViewController.h; sourceTree = "<group>"; };
+		85CC65491B67204A00BB51F9 /* ListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +157,7 @@
 				858A61931B656FEB00F84947 /* AppDelegate.h */,
 				858A61941B656FEB00F84947 /* AppDelegate.m */,
 				858A61991B656FEB00F84947 /* Main.storyboard */,
+				85CC65471B67164B00BB51F9 /* Models */,
 				85ADC46C1B659EF6000D2C6A /* Secondary Controllers */,
 				858A61B81B6572D200F84947 /* Primary Controllers */,
 				85ADC4701B65BC39000D2C6A /* Custom Classes */,
@@ -204,6 +214,10 @@
 		85ADC46C1B659EF6000D2C6A /* Secondary Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				85CC65481B67204A00BB51F9 /* ListingsViewController.h */,
+				85CC65491B67204A00BB51F9 /* ListingsViewController.m */,
+				855020EC1B66A14700960A23 /* SellFormViewController.h */,
+				855020ED1B66A14700960A23 /* SellFormViewController.m */,
 				85ADC4661B659EBC000D2C6A /* HowViewController.h */,
 				85ADC4671B659EBC000D2C6A /* HowViewController.m */,
 				85ADC4691B659EC3000D2C6A /* AuthViewController.h */,
@@ -240,6 +254,15 @@
 				85ADC4721B65C4C2000D2C6A /* Parse.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85CC65471B67164B00BB51F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85CC65441B67164600BB51F9 /* Listing.h */,
+				85CC65451B67164600BB51F9 /* Listing.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,7 +371,10 @@
 				85ADC4681B659EBC000D2C6A /* HowViewController.m in Sources */,
 				85ADC46B1B659EC3000D2C6A /* AuthViewController.m in Sources */,
 				858A61921B656FEB00F84947 /* main.m in Sources */,
+				85CC65461B67164600BB51F9 /* Listing.m in Sources */,
 				85ADC45F1B6579A3000D2C6A /* ProfileViewController.m in Sources */,
+				85CC654A1B67204A00BB51F9 /* ListingsViewController.m in Sources */,
+				855020EE1B66A14700960A23 /* SellFormViewController.m in Sources */,
 				85ADC4561B65798B000D2C6A /* SearchViewController.m in Sources */,
 				858A61B71B6572CB00F84947 /* HomeViewController.m in Sources */,
 				85ADC46F1B65BC17000D2C6A /* HomeCollectionViewCell.m in Sources */,
